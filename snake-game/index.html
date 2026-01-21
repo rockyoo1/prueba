@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Culebrita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🐍 JUEGO DE LA CULEBRITA 🐍</h1>
+
+        <div class="game-info">
+            <div class="score-board">
+                <p>Puntuación: <span id="score">0</span></p>
+                <p>Nivel: <span id="level">1</span></p>
+                <p>Velocidad: <span id="speedDisplay">🐢 Lenta</span></p>
+            </div>
+            <div class="speed-bar">
+                <p>Progreso de Velocidad:</p>
+                <div class="speed-bar-container">
+                    <div class="speed-bar-fill" id="speedBar" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="mobile-controls" id="mobileControls">
+            <div class="dpad">
+                <button class="arrow-btn" id="btnUp" data-direction="up">⬆️</button>
+                <div class="dpad-row">
+                    <button class="arrow-btn" id="btnLeft" data-direction="left">⬅️</button>
+                    <button class="arrow-btn" id="btnDown" data-direction="down">⬇️</button>
+                    <button class="arrow-btn" id="btnRight" data-direction="right">➡️</button>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn" id="mobileStartBtn">Iniciar</button>
+                <button class="action-btn" id="mobilePauseBtn">Pausar</button>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="startBtn" class="btn btn-success">Iniciar Juego</button>
+            <button id="pauseBtn" class="btn btn-warning" disabled>Pausar</button>
+            <button id="resetBtn" class="btn btn-danger">Reiniciar</button>
+        </div>
+
+        <div class="game-status">
+            <p id="status">Presiona "Iniciar Juego" para comenzar</p>
+        </div>
+
+        <div class="instructions">
+            <h3>Instrucciones:</h3>
+            <ul>
+                <li>Dirije la culebrita hacia las manzanas 🍎</li>
+                <li>Cada manzana que comas suma 10 puntos</li>
+                <li>No choques con las paredes ni contigo mismo</li>
+                <li>Cada 5 manzanas comidas, aumenta la velocidad</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
