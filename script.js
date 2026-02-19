@@ -415,8 +415,15 @@ function draw() {
 function endGame() {
     gameRunning = false;
     gameOver = true;
+
+    // Actualizar botones de escritorio
     pauseBtn.disabled = true;
     startBtn.disabled = false;
+
+    // Actualizar botones móviles
+    mobilePauseBtn.disabled = true;
+    mobileStartBtn.disabled = false;
+
     statusDisplay.textContent = `🎮 ¡GAME OVER! Puntuación Final: ${score}`;
     statusDisplay.classList.add('gameover');
     draw();
